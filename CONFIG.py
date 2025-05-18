@@ -1,0 +1,12 @@
+# Define regions of interest
+Y_START = 2115
+Y_END = Y_START + 35
+
+X_LOC_END = 530
+TIME_START = 2720
+
+
+INTERVAL = 10
+
+
+STARTS_AT = "20250517140819_001754.json"
