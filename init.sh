@@ -7,4 +7,9 @@ echo "Date,Start Time,End Time,Start Address,End Address,Total Miles,Purpose,Raw
 
 
 
-echo "This data was generated based off dashcam footage. " > records/README.txt
+echo "This data was auto-generated based off dashcam footage. See: https://github.com/PsychedelicPalimpsest/dashcam-millage-tracking for more information" > records/README.txt
+echo "LEGAL NOTICE: This data is highly confidential and contains personal information. 
+Unauthorized access, use, or redistribution is strictly prohibited. Redistribution 
+or sharing of this data without explicit written permission from its owner may 
+result in severe legal consequences, including penalties and prosecution under 
+applicable laws." > records/NOTICE
