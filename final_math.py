@@ -4,6 +4,7 @@ import folium
 from datetime import datetime
 from geopy.geocoders import Nominatim
 from datetime import date
+import zipfile
 
 
 from CONFIG import STARTS_AT
@@ -153,9 +154,16 @@ def main():
         mk.add_to(m)
 
     m.save(os.path.join(details, date_url + ".html"))
+
+
     f = open(os.path.join(details, date_url + ".json"), "w")
     f.write(json.dumps(gps_data))
     f.close()
+
+    zip = zipfile.ZipFile(os.path.join(details, date_url + ".zip"), "w", zipfile.ZIP_DEFLATED)
+    for j in sorted(os.listdir(jsonOut)):
+        zip.write(os.path.join(jsonOut, j), arcname=j)
+    zip.close()
 
 
     f = open(os.path.join(records, "master.csv"), "a")
